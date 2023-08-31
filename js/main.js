@@ -38,3 +38,4 @@ createApp({
 //* Voglio creare un nuovo oggetto e
 //* inserirlo dentro myToDoCopy al click
 //* in più voglio che il testo sia sempre diverso..
+//* feat bonus 2
