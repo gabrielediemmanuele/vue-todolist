@@ -52,6 +52,7 @@
               placeholder="Dimmi, cosa hai da fare?"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
+              v-on:keyup.enter="addNewTask()"
               v-model="postIt"
             />
             <button

@@ -27,6 +27,7 @@ createApp({
       };
 
       this.myToDoCopy.unshift(newPost);
+      this.postIt = "";
     },
 
     toggleState(index) {
