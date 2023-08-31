@@ -44,16 +44,33 @@
         </div>
         <hr />
         <!-- Input container-->
-        <div class="input-cont"></div>
+        <div class="input-cont">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Dimmi, cosa hai da fare?"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              v-model="postIt"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+              @click="addNewTask()"
+            >
+              Crea Impegno
+            </button>
+          </div>
+        </div>
         <ul class="to-do-list">
-          <li
-            class="to-do-element"
-            v-for="(todoElement, index) in myToDoCopy"
-            :class="todoElement.done ? 'striked' : ''"
-          >
+          <li class="to-do-element" v-for="(todoElement, index) in myToDoCopy">
             <div
-              class="alert alert-warning alert-dismissible fade show"
+              class="alert alert-success alert-dismissible fade show"
               role="alert"
+              :class="todoElement.done ? 'striked alert-danger' : ''"
+              @click="toggleState(index)"
             >
               {{ todoElement.text }}
               <button

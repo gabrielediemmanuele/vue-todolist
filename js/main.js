@@ -1,30 +1,5 @@
 //* ToDo List
-const toDoList = [
-  {
-    text: "ciao",
-    done: false,
-  },
-  {
-    text: "ciao",
-    done: false,
-  },
-  {
-    text: "ciao",
-    done: false,
-  },
-  {
-    text: "ciao",
-    done: false,
-  },
-  {
-    text: "ciao",
-    done: false,
-  },
-  {
-    text: "ciao",
-    done: false,
-  },
-];
+const toDoList = [];
 
 //* Creo una copia dell'array per evitare che venga
 //* sovrascritto..
@@ -36,6 +11,7 @@ createApp({
   data() {
     return {
       myToDoCopy,
+      postIt: "",
     };
   },
 
@@ -43,6 +19,21 @@ createApp({
     deleteTask(index) {
       this.myToDoCopy.splice(index, 1);
     },
+
+    addNewTask() {
+      const newPost = {
+        text: this.postIt,
+        done: false,
+      };
+
+      this.myToDoCopy.unshift(newPost);
+    },
+
+    toggleState(index) {
+      this.myToDoCopy[index].done = !this.myToDoCopy[index].done;
+    },
   },
 }).mount("#app");
-//*
+//* Voglio creare un nuovo oggetto e
+//* inserirlo dentro myToDoCopy al click
+//* in più voglio che il testo sia sempre diverso..
