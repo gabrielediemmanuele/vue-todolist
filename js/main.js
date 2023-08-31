@@ -26,7 +26,7 @@ createApp({
         done: false,
       };
 
-      this.myToDoCopy.unshift(newPost);
+      this.myToDoCopy.push(newPost);
       this.postIt = "";
     },
 
