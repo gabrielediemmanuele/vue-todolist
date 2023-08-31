@@ -29,14 +29,15 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 
 # STEPS
 
-1. Creare un array di oggetti "To Do" formati da due proprietà:
+1. Creare un array di oggetti e la sua Copia "To Do" formati da due proprietà:
 
 - text (sarà il testo contenuto nel toDo)
 - done (true o false // corrisponde a se il compito è stato svolto o meno.)
 
-2. Milestone 1: stampare all'interno di una _lista_ ogni _oggetto_
+2. Milestone 1: stampare all'interno di una di ogni lista un oggetto dell'array, che verrà creato proceduralmente...
+   utilizzare il v-for!
 
-   - fare un controllo, se il compito è stato svolto, renderlo sbarrato con una classe css.
+   - fare un controllo, iniziale, se il compito è stato svolto, ipoteticamente renderlo sbarrato con una classe css.
 
 3. Milestone 2: visualizzare di fianco ad ogni item, una x e cliccando su questa, l'item verrà rimosso dalla lista.
    (Utilizzare bootstrap per l'input adeguato...)

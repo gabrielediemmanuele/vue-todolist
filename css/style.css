@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+.to-do-list {
+  list-style-type: none;
+}
