@@ -22,7 +22,7 @@ const toDoList = [
   },
   {
     text: "ciao",
-    done: true,
+    done: false,
   },
 ];
 
@@ -39,6 +39,10 @@ createApp({
     };
   },
 
-  methods: {},
+  methods: {
+    deleteTask(index) {
+      this.myToDoCopy.splice(index, 1);
+    },
+  },
 }).mount("#app");
 //*
